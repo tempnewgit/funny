@@ -1,0 +1,47 @@
+﻿a{cursor:pointer;text-decoration:none;}
+a:visited {color: #ff9001}	/* 已访问的链接 */
+a:hover {text-decoration:none;color: #FFCC33}	/* 鼠标移动到链接上 */
+a:active {color: #3bb3ee}	/* 选定的链接 */
+table tbody tr td {text-align: center;vertical-align: middle}
+table tbody tr th {text-align: center;vertical-align: middle;background: #ddd}
+ul{list-style: none;margin: 0;padding: 0}
+select {appearance: none; -moz-appearance: none;-webkit-appearance: none;}
+
+/*input[type="button"]{ font-size: 2.68rem;background:#007aff;color: #fff;;border: none; border-radius: 10px;}*/
+/*input[type="password"]{ ; border: 1px solid #ccc;border-radius: 9px;text-align: left;padding-left: 3% }*/
+/*input[type="text"]{ ; border: 1px solid #ccc;border-radius: 9px;text-align: left;padding-left: 3% }*/
+/*select {  border: solid 1px #ddd;  padding-left:3.5%;  border-radius: 8px ;background: #f8f8f8; }*/
+
+.all{;width: 100%;height: 100%;;}
+.buttonStyle05 {
+    font-size:1.3rem;
+    color:#fff;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background:#ff9001;       /*  没有渐变效果的浏览器   */
+    background: -moz-linear-gradient(bottom, rgba(59,179,238,0.8) 35%,rgba(0,122,255,0.95) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(59,179,238,0.8) 35%,rgba(0,122,255,0.95) 100%);
+    background: -o-linear-gradient(bottom, rgba(59,179,238,0.8) 35%,rgba(0,122,255,0.95) 100%);
+    background: -ms-linear-gradient(bottom, rgba(59,179,238,0.8) 35%,rgba(0,122,255,0.95) 100%);
+    background: linear-gradient(to bottom, rgba(59,179,238,0.8) 35%,rgba(0,122,255,0.95) 100%);
+    box-shadow:  inset -1px 1px 2px rgba(1,122,200,0.9),rgba(50,50,50,0.9) 0 2px 1px 1px;
+}
+.buttonStyle02{
+    font-size:1.3rem;
+    color:#fff;
+    text-align: center;
+    ;border: none;
+    border-radius: 8px;
+    /*  百分数是指累计渐变范围*/
+    background-color:#79bbff;
+    background: -moz-linear-gradient(bottom, rgba(121,187,255,0.8) 25%,rgba(55,141,229,0.9) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(121,187,255,0.8) 25%,rgba(55,141,229,0.9) 100%);
+    background: -o-linear-gradient(bottom, rgba(121,187,255,0.8) 25%,rgba(55,141,229,0.9) 100%);
+    background: -ms-linear-gradient(bottom, rgba(121,187,255,0.8) 25%,rgba(55,141,229,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(121,187,255,0.8) 25%,rgba(55,141,229,0.9) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+    box-shadow:  inset -1px 1px 2px rgba(1,122,200,0.9),rgba(50,50,50,0.9) 0 2px 1px 1px;
+}
+
+

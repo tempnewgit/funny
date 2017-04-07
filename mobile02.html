@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <!--  不允许屏幕缩放  -->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <!--  允许屏幕缩放  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.2, initial-scale=1.0 user-scalable=yes" />
+     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <title>
+        menu
+    </title>
+
+    <!--width=device-width ：表示宽度是设备屏幕的宽度-->
+    <!--initial-scale=1.0：表示初始的缩放比例-->
+   <!--minimum-scale=0.5：表示最小的缩放比例-->
+    <!--maximum-scale=2.0：表示最大的缩放比例-->
+    <!--user-scalable=yes：表示用户是否可以调整缩放比例-->
+
+    <!-- iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览 -->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
+    <!-- iphone的私有标签，它指定的iphone中safari顶端的状态条的样式 -->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--这样写可以达到的效果是如果安装了GCF，则使用GCF来渲染页面，如果为安装GCF，则使用最高版本的IE内核进行渲染-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=9" />-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+
+    <!--  只要是IE9以下，强制使用最新IE内核渲染 -->
+<!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AmPefhhepCGu2bpN1Mgbw1C0"></script>-->
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>-->
+    <!--<link href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" rel="stylesheet"/>-->
+
+
+    <!--<link rel='icon' href='images/002.jpg' type=‘image/x-jpg’ />-->
+    <!-- 网站左边小图标-->
+
+<!--bootstrap 的引用，国内网址链接-->
+    <!--<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+    <!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<!--bootstrap 的引用，国内网址链接-->
+
+    <!--<script type="text/javascript" src="images/jquery-1.8.0.js"></script>-->
+
+
+  
+<!--     <link rel="stylesheet" type="text/css" href="images/dateP/mobiscroll.css">
+    <link rel="stylesheet" type="text/css" href="images/dateP/mobiscroll_date.css"> -->
+ <!--  个人css  -->
+    <!-- <link href="images/common.css" rel="stylesheet" type="text/css"/> -->
+<!--  个人css  -->
+
+<!--  jquery 特殊图标  -->    
+    <!--<link href="images/css/font-awesome.min.4.7.css" rel="stylesheet" type="text/css"/>-->
+    <link href="images/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!--  jquery 特殊图标   -->
+  <link rel="stylesheet" type="text/css" href="images/jquery-ui-1.9.2.custom.min.css">
+<!--  Angular  -->
+    <!--<script type="text/javascript" src="images/Angular.js"></script>-->
+<!--  Angular  -->
+
+    <!--  微信开发库  -->
+    <!--<link rel="stylesheet" type="text/css" href="images/weui.min.css"/>-->
+    <!--  layer手机版  -->
+    <!--<script type="text/javascript" src="images/layerMobile/layer.js"></script>-->
+    <!--  layer手机版  -->
+
+    <!--  layer电脑版  -->
+    <!--<script type="text/javascript"  src="images/layer/layer.js"></script>-->
+    <!--  layer电脑版  -->
+    <link rel="stylesheet" type="text/css" href="images/bootstrap.min.css">
+
+
+    <script type="text/javascript"  src="images/jquery-2.0.0.min.js"></script>
+
+ 
+    <script type="text/javascript" src="images/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script type="text/javascript" src="images/bootstrap.min.js"></script>
+
+    <!--<script type="text/javascript" src="images/SlideBox/jquery.slideBox.min.js"></script>-->
+    <!--<script type="text/javascript" src="images/dateP/mobiscroll_date.js"  charset="gb2312" ></script>-->
+    <!--<script type="text/javascript" src="images/dateP/mobiscroll.js"></script>-->
+    <!--<script type="text/javascript" src="images/base63.js"></script>-->
+
+    <!--单独电脑版时间选择插件-->
+   <!--<script src="images/laydate/laydate.js"></script>-->
+
+    <!--  自动生成table数据插件  -->
+    <!--<script src="images/laytpl.js"></script>-->
+
+
+
+
+</head>
+<body >
+<style type="text/css">
+
+    /*  用于手机端，body不设置min属性，内容高度根据子div进行扩大    */
+
+    body,html{
+        font-size: 1.2vw;
+        padding: 0;
+        margin:0;
+        height:100%;
+        width :100%;
+        min-height: 520px;
+        min-width: 300px;
+        /*font-family:SimSun;*/
+        font-family: SimHei;
+        /*font-family: FangSong;*/
+        /*font-family: NSimSun;*/
+    }
+
+    /*  用于PC端电脑   */
+    /*body,html{*/
+    /*font-size: 1.3vw;*/
+    /*margin:0;*/
+    /*height:100%;*/
+    /*width :100%;*/
+    /*min-height: 600px;*/
+    /*min-width: 800px;*/
+    /*font-family:SimSun;*/
+    /*}*/
+
+    .CoverDiv{display: none;width: 400%;height:800%;background: #bbb;opacity:0.5;z-index: 5;position: fixed;left: 0;top: 0 }
+    .LoadingDiv{display: none;width: 400%;height:800%;background: #ccc;opacity:0.35;z-index: 5;position: fixed;left: 0;top: 0 }
+    .LoadingDiv div{height: 5%;width: 25%;margin-top:10%;position: relative;text-align: center}
+    /*  折叠菜单CSS Begin */
+    .MenuUl{list-style: none;margin: 0;padding: 0}
+    .MenuUl li ul{list-style: none;margin: 0;padding: 0}
+    .accordion a {  color: #428bca; text-decoration: none;  }
+    .accordion {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        background: #FFF;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    .accordion .link {
+        cursor: pointer;
+        display: block;
+        padding: 15px 15px 15px 42px;
+        color: #4D4D4D;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid #CCC;
+        position: relative;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .accordion li:last-child .link {  border-bottom: 0; }
+    .accordion li i {
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        font-size: 18px;
+        color: #595959;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .accordion li i.fa-chevron-down { right: 12px; left: auto; font-size: 16px; }
+    .accordion li.open .link {  color: #428bca;}
+    .accordion li.open i {  color: #428bca;  }
+    .accordion li.open i.fa-chevron-down {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .link:hover {  color: #428bca;}
+    .submenu {  display: none;  background: #444359;  font-size: 14px;  }
+    .submenu li {  border-bottom: 1px solid #4b4a5e;  }
+    .submenu a {
+        display: block;
+        text-decoration: none;
+        color: #d9d9d9;
+        padding: 12px 0 12px 30px;
+        text-align: left;
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+    .submenu a:hover {  background: #428bca;  color: #FFF; }
+    /*  折叠菜单CSS End */
+    /* === 左侧隐藏菜单 Begin === */
+    .MeNav {list-style: none;padding: 0;width: 100%;height: 100%}
+    .MeNav>li { border-top: 1px solid #555555; border-bottom: 1px solid #2e2e2e; position: relative;height:10%;width: 100%}
+    .MeNav li a { display: block; padding: 14px 0 8px 0; color: #bababa; font-size: 11px; width: 100%;text-decoration: none;
+        background: -moz-linear-gradient(top,  rgba(86,86,86,0.2) 0%, rgba(54,54,54,0.2) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(86,86,86,0.2)), color-stop(100%,rgba(54,54,54,0.2)));
+        background: -webkit-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: -o-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: -ms-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33565656', endColorstr='#33363636',GradientType=0 );
+    }
+    .MeNav li a span { display: block; padding-top: 4px; text-shadow: 0 1px 0 #303030; }
+    .MeNav li a img { opacity: 0.5; filter: alpha(opacity=50); }
+    .MeNav > li > a:hover {
+        background: -moz-linear-gradient(top,  rgba(86,86,86,0.2) 0%, rgba(54,54,54,0.1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(86,86,86,0.2)), color-stop(100%,rgba(86,86,86,0.1)));
+        background: -webkit-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(86,86,86,0.1) 100%);
+        background: -o-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.1) 100%);
+        background: -ms-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.1) 100%);
+        background: linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(86,86,86,0.1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33565656', endColorstr='#1a363636',GradientType=0 );
+    }
+    .MeNav li a.active { color: #428bca;}
+    .MeNav li a.active img { opacity: 1; filter: alpha(opacity=100); -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
+    .MeNav li a:hover img { opacity: 1; filter: alpha(opacity=100); -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
+    .MeNav > li > a:hover { color: #fff; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+    /* 以下代码是实现二级菜单 */
+    .MeNav li:hover ul{ display: block; }
+    .MeNav>li>ul { display: none;border-left:5px solid #007aff;position: absolute; top: 0;font-size: 11px; min-width: 120px; white-space: nowrap; padding-left: 5px; left: 100%; -webkit-border-top-right-radius: 8px; text-align: left;background: #292929;z-index: 1000;}
+    .MeNav li ul li { border-bottom: 1px solid #343434; border-top: 1px solid #545454;background: url(__PUBLIC__/Img/Switcher/sidebar.jpg);}
+    .MeNav li ul li:hover { background: #555; }
+    .MeNav li ul li:first-child { border-top: none; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px;}   /* 第一个li */
+    .MeNav li ul li:last-child { border-bottom: none; -webkit-border-bottom-left-radius: 8px;  -webkit-border-bottom-right-radius: 8px;}   /* 最后一个li */
+    .MeNav li ul li div { display:inline-block; padding: 8px 8px 8px 8px; color: #c2c2c2;min-width: 150px}
+    .MeNav li ul li div span { display:inline-block;width: auto}
+    .MeNav li ul li div a {  display:inline-block;width: 80%;background: transparent}
+    /*.nav li ul li a [class*="icol-"] { opacity: 0.5; filter: alpha(opacity=50); padding-top: 4px; }*/    /*  这个是选择class中含有ico-的对象 */
+    /* 以下代码是实现三级级菜单 */
+    .MeNav li ul li ul{ display: none;border-left:5px solid #563d7c;left: 100%;top:0; position: absolute; padding-left: 5px; -webkit-border-top-right-radius: 8px;background: #505050}
+    .MeNav li ul li ul li{ display: none;border-top: 1px solid #606060; border-bottom: 1px solid #404040; position: relative;  }
+    .MeNav li ul li:hover ul li{ display: block;}
+    /* === 左侧隐藏菜单 End === */
+    /* === left menu Begin === */
+    .navb { list-style: none;padding: 0;margin: 0;z-index: 10;position: relative;background: #292929;overflow-y:auto;-webkit-overflow-scrolling: touch}
+    .navb li { border-top: 1px solid #555555; border-bottom: 1px solid #2e2e2e; position: relative;height:10%;width: 100% }
+    .navb li a { display: table; color: #bababa; font-size: 11px; width: 100%;text-decoration: none;
+        background: -moz-linear-gradient(top,  rgba(86,86,86,0.2) 0%, rgba(54,54,54,0.2) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(86,86,86,0.2)), color-stop(100%,rgba(54,54,54,0.2)));
+        background: -webkit-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: -o-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: -ms-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        background: linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.2) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33565656', endColorstr='#33363636',GradientType=0 );
+    }
+    .navb li a span { display: table-cell;vertical-align: middle;text-align: center; text-shadow: 0 1px 0 #303030; }
+    .navb > li > a:hover {
+        background: -moz-linear-gradient(top,  rgba(86,86,86,0.2) 0%, rgba(54,54,54,0.1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(86,86,86,0.2)), color-stop(100%,rgba(86,86,86,0.1)));
+        background: -webkit-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(86,86,86,0.1) 100%);
+        background: -o-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.1) 100%);
+        background: -ms-linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(54,54,54,0.1) 100%);
+        background: linear-gradient(top,  rgba(86,86,86,0.2) 0%,rgba(86,86,86,0.1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33565656', endColorstr='#1a363636',GradientType=0 );
+    }
+    /*.navb li a.active { color: #007aff;}*/
+    /*.navb li a.active img { opacity: 1; filter: alpha(opacity=100); -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }*/
+    /*.navb li a:hover img { opacity: 1; filter: alpha(opacity=100); -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }*/
+    .navb > li > a:hover { color: #fff;background-color:#428bca; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+    /* === left menu End === */
+    /* === top menu Begin === */
+    .Uli{ list-style: none;margin: 0;padding: 0}
+    .Uli>li{;float: left;height: 100%}
+    .Uli>li>div{ display: table;height: 100%;width: 100%}
+    .Uli>li>div>a{ display: table-cell;vertical-align: middle;text-decoration: none;color: #ddd}
+    /* === top menu End === */
+    .btnground{background: #61BFAD;border-color:#449d44;border-radius: 10px;display: table;}
+    .btnground a{display: table-cell;vertical-align: middle;text-align: center;text-decoration: none;font-size: 2.5rem}
+    .btnground:hover{ ;background: #61BFAD;border-color:#449d44;}
+
+    /*.TMenuDiv{z-index: 10}.TrapMenu{z-index: 10;height: 100px}*/
+    /*.TrapMenu{position: fixed;left: -150%; width: 30%;min-width: 230px;height: auto}*/
+
+</style>
+<script language="javascript">
+    var IsMobile=0;
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){ IsMobile=1} // 证明是移动端登陆
+
+</script>
+
+<div class="CoverDiv"></div>
+<div class="LoadingDiv">
+<div style=""><i style="zoom: 400%" class="fa fa-spinner fa-pulse"></i></div>
+</div>
+<div style="margin:0 auto;width: 100%;height: 100%;max-width: 1500px" >
+<!-- 左则隐藏菜单一 Begin-->
+<ul id="LeftMenu" class="navb"  style="position: fixed;left: -150%;height: 100%;min-height: 100%;width:30%;min-width: 230px">
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+    <li class="" style="color: #666;height: 10%" ><a href="javascript:void(0)" style="height: 100%;font-size:2.8rem"><span style="">首页</span></a></li>
+</ul>
+<!-- 左则隐藏菜单一 End-->
+
+<!--  折叠菜单 Begin -->
+<!--<ul id="LeftMenu" class="accordion MenuUl" style="position: fixed;left: -150%;height: 100%;min-height: 100%;width:30%;min-width: 230px;z-index: 10">-->
+    <!--<li>-->
+        <!--<div class="link"><i class="fa fa-folder-o"></i>招聘信息管理<i class="fa fa-chevron-down"></i></div>-->
+        <!--<ul class="submenu">-->
+            <!--<li><a href="__MODULE__/Admin/Admin">-->
+                <!--招聘信息-->
+            <!--</a></li>-->
+        <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+        <!--<div class="link"><i class="fa fa-file-text"></i>文章管理<i class="fa fa-chevron-down"></i></div>-->
+        <!--<ul class="submenu">-->
+            <!--<li><a href="__MODULE__/Admin/TextManage">-->
+                <!--分页-->
+            <!--</a></li>-->
+            <!--<li><a href="__MODULE__/Admin/HPTextManOne">-->
+                <!--文章-->
+            <!--</a></li>-->
+            <!--<li><a href="__MODULE__/Admin/TextManageTwo">-->
+                <!--文章管理二-->
+            <!--</a></li>-->
+        <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+        <!--<div class="link"><i class="fa fa-rotate-left"></i>轮播图片管理<i class="fa fa-chevron-down"></i></div>-->
+        <!--<ul class="submenu">-->
+            <!--<li><a href="__MODULE__/Admin/ImgManage">-->
+                <!--轮播图管理-->
+            <!--</a></li>-->
+            <!--<li><a href="__MODULE__/Admin/MobileManage">手机页面管理<span class="badge" style="float: right;background: #aaa">3</span></a></li>-->
+            <!--<li><a href="__MODULE__/Admin/MenuAbo">按钮样式<span class="badge" style="display: none;float: right;background: #aaa">3</span></a></li>-->
+        <!--</ul>-->
+    <!--</li>-->
+<!--</ul>-->
+<!--  折叠菜单 End -->
+
+<!--左侧隐藏菜单二Begin-->
+<!--<div style="position: fixed;text-align: center;top: 0;left: -150%; z-index: 10;width: 10%;min-width: 230px;height: 100%;min-height: 100%">-->
+    <!--<ul class="MeNav"  style="background: #292929">-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/other.png" alt="" /><span></span></a></li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/other.png" alt="" /><span>Dashboard</span></a></li>-->
+        <!--<li><a href="javascript:void(0)" class="active" title=""><img src="__PUBLIC__/Img/Icon/dialogs.png" alt="" /><span>Target</span></a></li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/div.png" alt="" /><span>UI elements</span></a>-->
+            <!--<ul>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >General elements</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Icons</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Button sets</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Grid</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Custom elements</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Experimental</a></div></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/stats.png" alt="" /><span>Forms stuff</span></a>-->
+            <!--<ul>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Inputs &amp; elements</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Validation</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >File uploader &amp; WYSIWYG</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Form wizards</a></div></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/upload.png" alt="" /><span>Messages</span></a></li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/div.png" alt="" /><span>Tables</span></a>-->
+        <!--</li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/stats.png" alt="" /><span>Other pages</span></a>-->
+            <!--<ul>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Funny</a></div></li>-->
+                <!--<li><div href="ui.html" title=""><span ></span><a >Page</a></div>-->
+                    <!--<ul style="">-->
+                        <!--<li><div href="ui.html" title=""><span >1-</span><a >Excel</a></div></li>-->
+                        <!--<li><div href="ui.html" title=""><span ></span><a >Validation</a></div></li>-->
+                        <!--<li><div href="ui.html" title=""><span ></span><a >Word</a></div></li>-->
+                        <!--<li><div href="ui.html" title=""><span ></span><a >Validation</a></div></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/dashboard.png" alt="" /><span>Wait</span></a></li>-->
+        <!--<li><a href="javascript:void(0)" title=""><img src="__PUBLIC__/Img/Icon/create.png" alt="" /><span>Run</span></a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--左侧隐藏菜单二End-->
+
+
+<div id="OnePart" style="width: 100%;height:10%">
+    <ul class="Uli" style="height: 100%;width: 100%;background: #6A7D8F">
+        <li style="width: 2%;height: 100%;padding: 0">
+        </li>
+        <li style=";width: 12%;padding: 0"><div><a style="font-size:3.5rem"></a></div></li>
+        <li style=";width: 23%;padding: 0"><div><a style="font-size:3.5rem">节点科技</a></div></li>
+        <li style=";width: 13%;padding: 0"><div><a style="font-size:3.5rem">案例</a></div></li>
+        <li style=";width: 13%;padding: 0"><div><a style="font-size:3.5rem">团队</a></div></li>
+        <li style=";width: 13%;padding: 0"><div id="LeftMenuOne"><a style="font-size:3.5rem">入驻</a></div></li>
+        <li style=";width: 24%;padding: 0"><div id="LeftMenuBtn"><a style="font-size:3.5rem">联系我们</a></div></li>
+    </ul>
+</div>
+    <nav class="TrapMenu navbar navbar-default" role="navigation" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">菜鸟教程</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">iOS</a></li>
+                    <li><a href="#">SVN</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Java <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div id="TwoPart" class="TwoPartB" style="width: 100%;height:82%;overflow: auto;-webkit-overflow-scrolling: touch">
+
+
+       <div  style="width: 100%;height:50%;border: 1px solid gold">
+              <!-- 无滚动情况测试 -->
+           <!--<div id="target_one" class="tar" style="display: inline-block;width: 100px;height: 100px;border: 1rem solid greenyellow"></div>-->
+           <!--<div id="target_th" class="tar"  style="display: inline-block;width: 100px;height: 100px;border: 1rem solid yellow;"></div>-->
+
+       </div>
+
+    <div  style="width: 100%;height:50%">
+
+        <!-- Boostrap轮播 Begin-->
+        <div id="myCarousel" class="carousel slide" style="height: 100%">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <!--<volist name="ImgNum" id="vb">-->
+                <li data-target="#myCarousel" data-slide-to="0" class="active" style="margin: 5px"></li>
+                <li data-target="#myCarousel" data-slide-to="1" style="margin: 5px"></li>
+                <li data-target="#myCarousel" data-slide-to="2" style="margin: 5px"></li>
+                <li data-target="#myCarousel" data-slide-to="3" style="margin: 5px"></li>
+                <li data-target="#myCarousel" data-slide-to="4" style="margin: 5px"></li>
+                <!--</volist>-->
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner AddTouch" style="height: 100%;border: 1px solid red" >
+                <div class="item active" style=";height: 100%;">
+                    <a style="display: block;height: 100%" href="" ><img style="height: 100%;width: 100%" src="images/001.jpg" alt="节点网络"></a>
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item" style=";height: 100%;">
+                    <a style="display: block;height: 100%" href="" ><img style="height: 100%;width: 100%" src="images/002.jpg" alt="节点网络"></a>
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item" style=";height: 100%;">
+                <a style="display: block;height: 100%" href="" ><img style="height: 100%;width: 100%" src="images/003.jpg" alt="节点网络"></a>
+                <div class="carousel-caption"></div>
+                </div>
+                <div class="item" style=";height: 100%;">
+                <a style="display: block;height: 100%" href="" ><img style="height: 100%;width: 100%" src="images/001.jpg" alt="节点网络"></a>
+                <div class="carousel-caption"></div>
+                </div>
+                <div class="item" style=";height: 100%;">
+                    <a style="display: block;height: 100%" href="" ><img style="height: 100%;width: 100%" src="images/002.jpg" alt="节点网络"></a>
+                    <div class="carousel-caption"></div>
+                </div>
+                <!--<volist name="RestImg" id="vn">-->
+                    <!--<div class="item" style="height: 100%;">-->
+                        <!--<a style="display: block;height: 100%" href="{$vn.urlpath}" ><img  style="height: 100%;width: 100%" src="__ROOT__/website/Images/Upload/Main/{$vn.name}" alt="节点网络"></a>-->
+                        <!--<div class="carousel-caption"></div>-->
+                    <!--</div>-->
+                <!--</volist>-->
+            </div>
+            <!-- 轮播（Carousel）导航，点击左右箭头实现轮播 -->
+            <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="background: transparent">-->
+                <!--&lt;!&ndash;<i  class="fa fa-check" style="position: absolute;top: 47%"></i>&ndash;&gt;-->
+                <!--<b style="position: absolute;top: 43%;font-weight: 600;zoom: 150%">&lt;</b>-->
+                <!--<span class="sr-only">Previous</span>-->
+            <!--</a>-->
+            <!--<a class="carousel-control right" href="#myCarousel" data-slide="next" style="background: transparent">-->
+                <!--&lt;!&ndash;<i class="fa fa-check" style="position: absolute;top: 47%"></i>&ndash;&gt;-->
+                <!--<b style="position: absolute;top: 43%;font-weight: 600;zoom: 150%">&gt;</b>-->
+                <!--<span class="sr-only">Next</span>-->
+            <!--</a>-->
+        </div>
+        <!-- Boostrap轮播 End-->
+
+    </div>
+
+    <!--<div id="one" style="width: 100%;height:50%;border: 1px solid gold">-->
+
+        <!--<form action="{:U('Admin/exein')}" method="post" enctype="multipart/form-data" target="iframe_name" style="width: 50%">-->
+        <!--<input id="BrowseDown" type="file" name="import" style=""/>-->
+        <!--<input  class="btn btn-primary" type="submit"  style="width: 25%;float: left" value="获取excel内容"/>-->
+        <!--<input id="Exist" class="btn btn-primary" type="button"  style="width: 25%;float: left" value="检测文件是否添加成功"/>-->
+        <!--</form>-->
+        <!--<iframe id="iframe_name" name="iframe_name"></iframe>-->
+
+
+        <!--&lt;!&ndash;  查询物流信息 Begin  &ndash;&gt;-->
+       <!--&lt;!&ndash;<style>&ndash;&gt;-->
+        <!--&lt;!&ndash;.list {height:75px; border-left:1px solid #eee;margin-left: 16px;width: 90%}&ndash;&gt;-->
+        <!--&lt;!&ndash;.info {height:100%;border-bottom:1px solid #eee;margin-left: 8%;margin-top: -10px;width: 90%;font-size:14px;color:#666;}&ndash;&gt;-->
+        <!--&lt;!&ndash;.step { height:60%;width: 100%;display: table} .step .normal{display: table-cell;vertical-align: middle;text-decoration: none}&ndash;&gt;-->
+        <!--&lt;!&ndash;.time { height:38%;width: 100%;display: table} .time .normal{display: table-cell;vertical-align: middle;text-decoration: none}&ndash;&gt;-->
+        <!--&lt;!&ndash;.step .on{display: table-cell;vertical-align: middle;text-decoration: none;color:#25ae5e}&ndash;&gt;-->
+        <!--&lt;!&ndash;.time .on{display: table-cell;vertical-align: middle;text-decoration: none;color:#25ae5e}&ndash;&gt;-->
+        <!--&lt;!&ndash;.dot {height:10px; width:10px; background:#ddd; border-radius:10px;;z-index: 10;position: relative;left: -5px;top:10px}&ndash;&gt;-->
+        <!--&lt;!&ndash;.doton {height:12px; width:12px; background:#25ae5e; border-radius:12px; border:1px solid #bbe2c9;z-index: 10;position: relative;left: -6px;top:10px}&ndash;&gt;-->
+      <!--&lt;!&ndash;</style>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="list">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="doton"></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="info">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class='step'><a class="on">物流信息</a></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class='time'><a class="on">时间</a></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="list">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="dot"></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="info">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class='step'><a class="normal">物流信息</a></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class='time'><a class="normal">时间</a></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;  查询物流信息 End  &ndash;&gt;-->
+    <!--</div>-->
+
+
+
+
+
+
+
+    <!-- 某个div出现内部滚动测试div移动 Begin  -->
+    <!--<div  style="width: 100%;height:60%;border: 1px solid gold">-->
+        <!--<div id="target_fir" class="tar" style="width: 100px;height: 100px;border: 1rem solid hotpink"></div>-->
+        <!--<div id="target_th" class="targrt" style="width: 100px;height: 100px;border: 1rem solid greenyellow"></div>-->
+
+
+    <!--</div>-->
+    <!-- 某个div出现内部滚动测试div移动 End  -->
+
+</div>
+
+
+
+    <div id="bubble" style="border: 1px solid hotpink;z-index: 10;position: fixed;left:80%;top:80%;width:50px;height: 50px;box-sizing:border-box; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;
+    ;background:rgba(255,255,255,0.6);border-radius: 25px;box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>    <!--移动div-->
+
+
+    <!-- 页面滚动情况下测试div移动 Begin -->
+    <div  style="width: 100px;height:200px;border: 1px solid yellow"></div>
+    <div id="target_th" class="targrt" style="display: inline-block;width: 100px;height: 100px;border: 1rem solid yellow"></div>
+    <!-- 页面滚动情况下测试div移动 End -->
+
+
+
+
+
+<style type="text/css">
+    .divver{display: table}.divver>a{ display: table-cell;vertical-align: middle;text-align: center;}.divver>span{ display: table-cell;vertical-align: middle;text-align: center;}
+    .divver>i{ display: table-cell;vertical-align: middle;text-align: center;}
+    /* 底部隐藏菜单一CSS-Begin */
+    .BottomMenu{display:block;text-decoration: none;cursor: pointer}
+    .BottomHidden{display:table;padding: 0;border-radius: 4px;background-color: #fff;border: 1px solid #ccc}
+    .BottomHidden a{ display:table-cell;vertical-align: middle;text-align: center;color:#333;text-decoration: none;font-size: 2rem}
+    .BottomHidden:hover{color: #333;background-color: #e6e6e6;border: 1px solid #adadad;}
+    .BottomHidden:focus{color: #333;background-color: #e6e6e6;border: 1px solid #8c8c8c;}
+    /* 底部隐藏菜单一CSS-End */
+</style>
+<div id="ThPart" class="TwoPartB" style="width: 100%;height:8%;">
+
+
+
+    <!--<div class="btnground" style="width: 100%;height: 100%;">-->
+        <!--<a style="color: #fff">按钮样式</a>-->
+    <!--</div>-->
+
+   <!-- 底部隐藏菜单一 Begin -->
+  <!--<div id="BtoBtn" style="width: 100%;height: 100%;z-index: 2">-->
+    <!--<ul style="width: 100%;height: 100%;list-style: none;padding: 0;margin-bottom: 0;margin-left: 0;position: relative">-->
+        <!--<li style="float: left;width: 50%;height: 100%;margin-left: 0">-->
+                <!--<div style=";width: 100%;height: 100%;background: #ff9001;">-->
+                <!--<a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">-->
+                   <!--<div class="divver" style="width: 100%;height: 50%;margin: 0">-->
+                      <!--<i class="fa fa-check" ></i>-->
+                   <!--</div>-->
+                   <!--<div class="divver"  style="width: 100%;height: 50%">-->
+                      <!--<span>按钮一</span>-->
+                   <!--</div>-->
+                <!--</a>-->
+                <!--</div>-->
+            <!--<div class="BottomMenuFold" style="display: none;width: 100%;height:0; position: relative;bottom:100%">-->
+                <!--<div class="BottomHidden" style=";width: 100%;height:50%;position: relative">-->
+                    <!--<a style=";width: 100%;height:100%" >btn05</a>-->
+                <!--</div>-->
+                <!--<div class="BottomHidden" style=";width: 100%;height:50%;position: relative">-->
+                    <!--<a style=";width: 100%;height:100%" >btn06</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li style="float: left;width: 50%;height: 100%">-->
+            <!--<div style=";width: 100%;height: 100%;background: #ff9001;">-->
+                <!--<a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">-->
+                    <!--<div class="divver" style="width: 100%;height: 50%;margin: 0">-->
+                        <!--<i class="fa fa-pencil" ></i>-->
+                    <!--</div>-->
+                    <!--<div class="divver"  style="width: 100%;height: 50%">-->
+                        <!--<span>按钮二</span>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="BottomMenuFold" style="display: none;width: 100%;height:0; position: relative;bottom:100%; ">-->
+                <!--<div class="BottomHidden"  style="width: 100%;height:50%;position: relative">-->
+                    <!--<a style=";width: 100%;height:100%" >btn05</a>-->
+                <!--</div>-->
+                <!--<div class="BottomHidden" style="width: 100%;height:50%;position: relative">-->
+                    <!--<a style=";width: 100%;height:100%" >btn06</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+    <!-- 底部隐藏菜单一 End -->
+
+    <!-- 底部隐藏菜单(淡出淡入) Begin -->
+    <!--<div id="BtoBtn" style="width: 100%;height: 100%;z-index: 2">-->
+        <!--<ul style="width: 100%;height: 100%;list-style: none;padding: 0;margin-bottom: 0;margin-left: 0;position: relative">-->
+            <!--<li style="float: left;width: 50%;height: 100%;margin-left: 0">-->
+                <!--<div style=";width: 100%;height: 100%;background: #ff9001;">-->
+                    <!--<a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">-->
+                        <!--<div class="divver" style="width: 100%;height: 50%;margin: 0">-->
+                            <!--<i class="fa fa-check" ></i>-->
+                        <!--</div>-->
+                        <!--<div class="divver"  style="width: 100%;height: 50%">-->
+                            <!--<span>按钮一</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="BottomMenuFold" style="display: none;width: 100%;height:150%;position: relative;bottom:250%">-->
+                    <!--<div class="BottomHidden" style=";width: 100%;height:50%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%" >btn05</a>-->
+                    <!--</div>-->
+                    <!--<div class="BottomHidden" style=";width: 100%;height:50%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%" >btn06</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li style="float: left;width: 50%;height: 100%">-->
+                <!--<div style=";width: 100%;height: 100%;background: #ff9001;">-->
+                    <!--<a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">-->
+                        <!--<div class="divver" style="width: 100%;height: 50%;margin: 0">-->
+                            <!--<i class="fa fa-pencil" ></i>-->
+                        <!--</div>-->
+                        <!--<div class="divver"  style="width: 100%;height: 50%">-->
+                            <!--<span>按钮二</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="BottomMenuFold" style="display: none;width: 100%;height:225%;position: relative;bottom:325%;">-->
+                    <!--<div class="BottomHidden"  style="width: 100%;height:33.3%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%" >btn05</a>-->
+                    <!--</div>-->
+                    <!--<div class="BottomHidden" style="width: 100%;height:33.3%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%" >btn06</a>-->
+                    <!--</div>-->
+                    <!--<div class="BottomHidden" style="width: 100%;height:33.3%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%" >btn07</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!-- 底部隐藏菜单(淡出淡入) End -->
+
+    <!-- 底部隐藏菜单二  Begin -->
+    <div id="BtoBtn" style="width: 100%;height: 100%;z-index: 2">
+        <ul style="width: 100%;height: 100%;list-style: none;padding: 0;margin-bottom: 0;margin-left: 0;position: relative">
+            <li style="float: left;width: 50%;height: 100%;margin-left: 0">
+                <div style=";width: 100%;height: 100%;background: #ff9001;position: relative;z-index: 2">
+                    <a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">
+                        <div class="divver" style="width: 100%;height: 50%;margin: 0">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="divver" style="width: 100%;height: 50%">
+                            <span>按钮一</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="BottomMenuFold" style="display: none;width: 100%;height:0;position: relative;bottom:100%;z-index: 1">
+                    <div class="BottomHidden" style=";width: 100%;height:50%;position: relative">
+                        <a style=";width: 100%;height:100%">btn05</a>
+                    </div>
+                    <div class="BottomHidden" style=";width: 100%;height:50%;position: relative">
+                        <a style=";width: 100%;height:100%">btn06</a>
+                    </div>
+                    <!--<div class="BottomHidden" style=";width: 100%;height:33.3%;position: relative">-->
+                        <!--<a style=";width: 100%;height:100%">btn06</a>-->
+                    <!--</div>-->
+                </div>
+            </li>
+            <li style="float: left;width: 50%;height: 100%">
+                <div style=";width: 100%;height: 100%;background: #ff9001;">
+                    <a class="BottomMenu" style="width: 100%;height: 100%;text-decoration: none">
+                        <div class="divver" style="width: 100%;height: 50%;margin: 0">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <div class="divver" style="width: 100%;height: 50%">
+                            <span>按钮二</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="BottomMenuFold" style="display: none;width: 100%;height:0;position: relative;bottom:100%;z-index: 1">
+                    <div class="BottomHidden" style="width: 100%;height:33.3%;position: relative">
+                        <a style=";width: 100%;height:100%">btn05</a>
+                    </div>
+                    <div class="BottomHidden" style="width: 100%;height:33.3%;position: relative">
+                        <a style=";width: 100%;height:100%">btn06</a>
+                    </div>
+                    <div class="BottomHidden" style="width: 100%;height:33.3%;position: relative">
+                        <a style=";width: 100%;height:100%">btn07</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部隐藏菜单二  End -->
+<script>
+    //    底部折叠菜单向上展开 Begin
+//    $('.BottomMenu').click(function(){
+//        var ind=$(this).parent().parent().index();
+//        if($('.BottomMenuFold').eq(ind).is(":hidden")){
+//            $('.BottomMenuFold').animate({
+//                bottom: '100%',
+//                height: 0
+//            },130);
+//            $('.BottomMenuFold').slideUp();
+//            $('.BottomMenuFold').eq(ind).slideDown(50);  // 跟$('.BottomMenuFold').eq(ind).show(50)一样效果
+//            $('.BottomMenuFold').eq(ind).animate({
+//                bottom: '250%',
+//                height: '150%'
+//            },135);
+//        }else if(!$('.BottomMenuFold').eq(ind).is(":hidden")){
+//            $('.BottomMenuFold').eq(ind).animate({
+//                bottom: '100%' ,
+//                height:0
+//            },130);
+//            $('.BottomMenuFold').eq(ind).slideUp();
+//        }
+//    });
+    //    底部折叠菜单向上展开 End
+
+
+    //    底部折叠菜单淡出淡入 Begin
+//    $('.BottomMenu').click(function(){
+//        var ind=$(this).parent().parent().index();
+//        if($('.BottomMenuFold').eq(ind).is(":hidden")){
+//            $('.BottomMenuFold').fadeOut(35);
+//            $('.BottomMenuFold').eq(ind).fadeIn(160);
+//        }else if(!$('.BottomMenuFold').eq(ind).is(":hidden")){
+//            $('.BottomMenuFold').eq(ind).fadeOut(90);
+//        }
+//    });
+    //    底部折叠菜单淡出淡入 End
+
+    //    底部折叠菜单向上展开二  Begin
+    $('.BottomMenu').click(function(){
+        var ind=$(this).parent().parent().index();
+        var num=$('.BottomMenuFold').eq(ind).children('.BottomHidden').length;
+        var Btn_bottom=100+num*75+'%';
+        var Btn_height=num*75+'%';
+        if($('.BottomMenuFold').eq(ind).is(":hidden")){
+            $('.BottomMenuFold').fadeOut(100);
+            $('.BottomMenuFold').eq(ind).animate({
+                bottom: Btn_bottom,
+                height: Btn_height
+            },130);
+            $('.BottomMenuFold').eq(ind).fadeIn(100);
+        }else if(!$('.BottomMenuFold').eq(ind).is(":hidden")){
+            $('.BottomMenuFold').eq(ind).fadeOut(100);  // 运行完才执行动画代码
+            $('.BottomMenuFold').eq(ind).animate({
+                bottom: '100%' ,
+                height: '0'
+            },130);
+        }
+    });
+    //    底部折叠菜单向上展开二  End
+</script>
+
+
+
+</div>
+
+</div>
+
+
+<script>
+
+    //    var funtemp = function(){ c = a + b;}    //with(){ }用法参考
+    //    var obj = { a: 8, b: 2, c: 5 };
+    //    with(obj){ eval("var fun = " + funtemp); }
+    //    fun();alert(obj.c);
+
+
+
+    // 设置boostrap轮播时间 Begin
+    $('#myCarousel').carousel({ interval:2500 })   // 当无左侧JS代码图片轮播只能通过手指滑动
+    // 设置boostrap轮播时间 End
+        $('#target_th').click(function(){
+//            $("#myCarousel").carousel('cycle');   // 开始
+//            $("#myCarousel").carousel('pause');   // 停止
+//            $('#myCarousel').carousel('prev')     // 上一张
+//            $('#myCarousel').carousel('next')     // 下一张
+//            $('#myCarousel').carousel(2)          // 第几张图片，从0开始
+        })
+//       $('#myCarousel').on('slide.bs.carousel',function(){   });  // 点击下面指向标点时触发
+
+
+
+
+
+
+
+
+     var ScrollTop=$('.targrt').eq(0).offset().top;                     //  JQ获取offset属性，当某个div里面有滚动，内部标签元素的offsetTop为此标签在无关滚动的情况下的offsetTop
+     var ScrollLeft=$('#target_th').offset().left;
+
+//    $('#BtoBtn').click(function(){
+//        console.log($('.TwoPartB')[0].scrollHeight);  // div包括滚动部分的总高度
+//        console.log($('.TwoPartB')[0].scrollHeight-$('.TwoPartB').eq(0).height());  // div可以滚动的高度
+//    })
+
+    var drag = document.getElementById('bubble');
+    var  winWeight = window.innerWidth;
+    var  middleWin = winWeight/2;
+    var endTouchX = 0;var endTouchY = 0;
+    function FingerMove(event){ // div被touchstart之后整个为document添加监听
+        var e = event || window.event;
+        e.preventDefault();
+        e.stopPropagation();
+//        var eve = e.touches[0];  // 用于touchmove,touchstart
+        var eve = e.changedTouches[0];   // 用于touchmove
+        if (e.targetTouches.length==1){
+        console.log('start');
+//        console.log(eve.pageY-document.body.scrollTop);
+        console.log(eve.pageY);     // console.log(eve.clientY)手指在浏览器窗口Y的坐标值，eve.pageY手指在document中的坐标值，eve.clientY=eve.pageY-document.body.scrollTop，screenX /screenY://触摸点相对于屏幕的位置
+//        console.log(e.type);      // 显示当前手指在屏幕中的动作touchstart  touchmove  touchend
+        console.log('middle');
+//        console.log(e.target);    // 接受touchmove事件的标签元素的html代码
+//        console.log(ScrollTop);
+//        console.log(ScrollTop-document.body.scrollTop-$('.TwoPartB').eq(0).scrollTop());  // div有滚动出现的内部标签元素相对于浏览器窗口的Y坐标(通用)
+//      console.log(document.getElementById('BtoBtn').offsetTop);    // 左侧代码通过对比两个不同div的offsetTop，判断当某个div里面有滚动，内部标签元素的offsetTop为此标签在无滚动情况下的offsetTop
+        drag.style.top=(eve.pageY-document.body.scrollTop-50)+'px';
+        drag.style.left=(eve.pageX-50)+'px';
+        }
+    }
+    function FingerEnd(event) {
+        var e = event || window.event;
+        e.preventDefault();
+//        e.stopPropagation();
+        var eve = e.changedTouches[0];   // 用于touchend
+        if (e.targetTouches.length == 0) { // 判断最后一根手指离开触发
+         endTouchX = eve.pageX;     //   当目标元素在某个div内部，移动div到特定位置后进行操作
+        endTouchY = eve.pageY-document.body.scrollTop;     //   eve.pageY是接触点在整个页面的位置（包括document.body.scrollTop这部分），不是在浏览器窗口的位置
+            console.log(endTouchY);console.log(endTouchY - (ScrollTop - document.body.scrollTop - $('.TwoPartB').eq(0).scrollTop()));
+            if ( endTouchY - (ScrollTop - document.body.scrollTop - $('.TwoPartB').eq(0).scrollTop())>=70&&endTouchY - (ScrollTop - document.body.scrollTop - $('.TwoPartB').eq(0).scrollTop())<=120&& endTouchX - ScrollLeft <= 130 && endTouchX - ScrollLeft >= 45) {
+                $('#target_th').append("<div class='jewelry' style='border: 1px solid yellow;position: relative;width:50px;height: 50px;box-sizing:border-box; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;" +
+                        ";background:rgba(255,255,255,0.6);border-radius: 25px;box-shadow: 0 0 10px rgba(0,0,0,0.3);'></div>");
+                drag.style.top = '80%';
+                drag.style.left = '80%';
+            }
+
+//        endTouchX = eve.pageX;
+//        drag.style.top = '80%';
+//        if(endTouchX > 0 && endTouchX < middleWin){  // 停靠左边
+//            drag.style.left = '10%';
+//        }
+//        else{  //停靠右边
+//            drag.style.left = '80%';
+//          // drag.style.left = 'auto'; drag.style.right = '10%';    // 结合左侧属性'auto'才能定义style.right = '10%';
+//        }
+//        endTouchX=0;
+
+            document.removeEventListener('touchmove', FingerMove, false);  // 清除监听必须要用函数名，因此增加监听也是通过函数名的形式
+            document.removeEventListener('touchend', FingerEnd, false);
+        }
+    }
+
+    drag.addEventListener('touchstart',function(event){    // 手指事件按下后才添加监听
+        var e = event || window.event;
+        if(e.touches.length==1){  // 判断只有一个手指在div上
+            document.addEventListener('touchmove',FingerMove,false);
+            document.addEventListener('touchend',FingerEnd,false)
+        }
+    },false);
+
+
+
+
+
+
+
+
+//    $('#Exist').click(function(){
+    //           if($('#BrowseDown').val()!='') {    // 判断是否选择了文件准备上传
+    //               var ObjFile = document.getElementById("BrowseDown");  // 文件字节数
+    //               var files = $('#BrowseDown').prop('files'); // 获取到文件列表
+    ////               alert(ObjFile.files[0].size)              // 获取上传文件的大小
+    //               if(files.length==0){     // 上传文件的数量，判断是否选择了文件准备上传
+    //                   return false;
+    //               }else{
+    //                   if (typeof(FileReader) === 'undefined'){
+    //                       return false;
+    //                   }
+    //                   var reader = new FileReader();           //新建一个FileReader
+    ////                   reader.readAsText(files[0],"UTF-8");   //用UTF-8编码将文件以二进制形式读入页面，可以读取txt文件
+    ////                   reader.readAsText(files[0],"gb2312 ")        //防止获取中文乱码
+    ////                   reader.readAsDataURL(files[0]);        //将文件以Data URL形式读入页面，用于将图片转成base64编码
+    //                   reader.readAsBinaryString(files[0]);   //将文件以文本形式读入页面
+    //                   reader.onload = function(evt){
+    //                   var fileString = evt.target.result;      // 读取文件内容
+    //                   alert(fileString);
+    //                   alert(typeof(fileString));
+    //                   }
+    //              }
+    //           }
+    //       })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // BOOSTRAP轮播手指滑动触发滚动 BEGIN
+    var startY=0;var startX=0;
+    var endY=0;var endX=0;
+    var FingersNum=0;  // 用于禁止两个以上手指在页面上
+    function  MoveStart(event) {
+            var e = event || window.event;
+//           e.preventDefault();  // 禁止窗口滚动、点击等相关事件
+//           e.stopPropagation();
+//            var touch = e.targetTouches[0];
+        $("#myCarousel").carousel('pause');   // 手指触摸后停止轮播
+         var touch = e.touches[0];
+            startY = touch.pageY;
+            startX = touch.pageX;
+            if (e.targetTouches.length > 1) {
+                FingersNum = e.targetTouches.length
+            }
+    }
+    function  MoveEnd(event) {
+        var e = event || window.event;
+        var touch = e.changedTouches[0];
+//    var touch = e.touches[0];
+        endY=touch.pageY;
+        endX=touch.pageX;
+       var ind=0;ind=parseInt(ind);
+        if(FingersNum==0){
+            if(startX-endX>0&&Math.abs(startX-endX)>=90){
+                for(var i=0;i<$('#myCarousel .carousel-indicators li').size();i++){
+                        if($('#myCarousel .carousel-indicators li').eq(i).attr('class')=='active'){
+                            ind=i;
+                        }
+                }
+                if(ind<4){
+                    $('#myCarousel .carousel-indicators li').eq(ind+1).trigger('click');
+                }else if(ind==4){
+                    $('#myCarousel .carousel-indicators li').eq(0).trigger('click');
+                }
+            }else if(startX-endX<0&&Math.abs(startX-endX)>=90){
+                for(var j=0;j<$('#myCarousel .carousel-indicators li').size();j++){
+                    if($('#myCarousel .carousel-indicators li').eq(j).attr('class')=='active'){
+                        ind=j;
+                    }
+                }
+                if(ind>0){
+                    $('#myCarousel .carousel-indicators li').eq(ind-1).trigger('click');
+                }else if(ind==0){
+                    $('#myCarousel .carousel-indicators li').eq(4).trigger('click');
+                }
+            }
+        }
+        if(e.targetTouches.length==0){
+            FingersNum=0;
+        }
+        $("#myCarousel").carousel('cycle');  // 手指离开后继续轮播
+    }
+    var Carousel= document.getElementById("myCarousel");
+    Carousel.addEventListener('touchstart',MoveStart);
+    Carousel.addEventListener('touchend',MoveEnd);
+    //    BOOSTRAP轮播手指滑动触发滚动 END
+
+
+
+
+
+// 左则隐藏菜单一 Begin
+    $("#LeftMenuBtn").click(function(){  // 左侧菜单栏显示和隐藏
+        $('.carousel-indicators').eq(0).hide();
+        $('#LeftMenu').height($(document).height());
+        var DivLeft=$("#LeftMenu").css('left');
+        DivLeft = DivLeft.replace(/px/g, "");
+        if(parseInt(DivLeft)<parseInt(-10)){
+            $("#LeftMenu").animate({left:'0'},400);
+            $('.CoverDiv').eq(0).show();
+        }
+    });
+    $('.CoverDiv').eq(0).click(function(){  // 点击遮罩div触发
+        var DivLeft=$("#LeftMenu").css('left');
+        DivLeft = DivLeft.replace(/px/g, "");
+        if(DivLeft==0){
+            $("#LeftMenu").animate({left:'-150%'},400);
+            $('.CoverDiv').eq(0).hide();
+        }
+//        var leftwo=$('.TrapMenu').eq(0).css('left');
+//        leftwo=parseInt(leftwo.replace(/px/,''));
+//        if(leftwo==0){
+//            $('.TrapMenu').eq(0).animate({left:'-150%'},400);
+//            $('.CoverDiv').eq(0).hide();
+//        }
+        var time=setTimeout("$('.carousel-indicators').eq(0).show()",280)
+    })
+// 左则隐藏菜单一 End
+
+// 左则boostrap菜单 Begin
+//    $('.ShowIndexMenu').eq(0).click(function(){  // 点击隐藏按钮触发
+//        var lef=$('.TrapMenu').eq(0).css('left');
+//        lef=parseInt(lef.replace(/px/,''));
+//        if(lef<0){
+//            $('.TrapMenu').eq(0).animate({left:0},400);
+//            $('.TrapMenu').eq(0).animate({top:0},400);
+//            $('.CoverDiv').eq(0).show();
+//        }
+//    })
+// 左则boostrap菜单 End
+
+// 左则隐藏菜单二 Begin
+//    $("#LeftMenuOne").click(function(){  // 左侧菜单栏显示和隐藏
+//        if (IsMobile==1){
+//            $(".MeNav").eq(0).parent().height($(document).height());
+//        }
+//        var DivLeft=$(".MeNav").eq(0).parent().css('left');
+//        DivLeft = DivLeft.replace(/px/g, "");
+//        if(parseInt(DivLeft)<parseInt(-10)){
+//            $(".MeNav").eq(0).parent().animate({left:'0'},600);
+//            $('.CoverDiv').eq(0).show();
+//        }
+//    });
+//    $('.CoverDiv').eq(0).click(function(){  // 点击遮罩div触发
+//        var DivLeft=$(".MeNav").eq(0).parent().css('left');
+//        DivLeft = DivLeft.replace(/px/g, "");
+//        if(DivLeft==0){
+//            $(".MeNav").eq(0).parent().animate({left:'-150%'},600);
+//            $('.CoverDiv').eq(0).hide();
+//        }
+//    })
+    // 左则隐藏菜单二 End
+
+
+//  利用relative的隐藏菜单 Begin
+//    $("#LeftMenuBtn").click(function(){  // 左侧菜单栏显示和隐藏
+//        //  $("#LeftMenu").height()会因为$(document.body).height()属性不够大，当第一次竖屏打开页面之后转横屏会出现$("#LeftMenu").height()小于$(document.body).height()的情况，翻转到竖屏后可以解决
+//        var DivLeft=$("#LeftMenu").css('left');
+//        DivLeft = DivLeft.replace(/px/g, "");
+//        if(parseInt(DivLeft)<parseInt(-10)){
+//            $("#LeftMenu").animate({left:'0'},400);
+//            $('.CoverDiv').eq(0).show();
+//        }
+//    });
+// $('.CoverDiv').eq(0).click(function(){  // 点击遮罩div触发
+//        var DivLeft=$("#LeftMenu").css('left');
+//        DivLeft = DivLeft.replace(/px/g, "");
+//        if(DivLeft==0){
+//            $("#LeftMenu").animate({left:'-1500%'},400);
+//            $('.CoverDiv').eq(0).hide();
+//        }
+//    })
+// 利用relative的隐藏菜单 End
+
+
+//  折叠菜单 Begin
+    var Accordion = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+        // Variables privadas
+        var links = this.el.find('.link');
+        // Evento
+        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+    }
+    Accordion.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+            $this = $(this),
+            $next = $this.next();
+
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+
+        if (!e.data.multiple) {
+            $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+        };
+    }
+    var accordion = new Accordion($('#LeftMenu'), false);
+//  折叠菜单 End
+
+
+
+</script>
+</body>
+</html>
